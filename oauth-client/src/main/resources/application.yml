@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ui
+
+spring:
+  thymeleaf:
+    cache: false
+      
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: amr-app
+      clientSecret: 123
+      accessTokenUri: http://localhost:9000/oauth/token
+      userAuthorizationUri: http://localhost:9000/oauth/authorize
+      grant-type: password
+    resource:
+      user-info-uri: http://localhost:9000/user
